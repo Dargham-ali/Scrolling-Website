@@ -1,0 +1,90 @@
+:root {
+  --bacolor: white;
+  --co: white;
+}
+
+body {
+  height: 200vh;
+  font-family: system-ui;
+  background: linear-gradient(#200016, #10001f);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.head {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  padding: 20px 20px 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+.logo a {
+  text-decoration: none;
+  color: var(--co);
+}
+.list ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul li {
+  margin-right: 10px;
+}
+.list .active,
+.list a:hover {
+  background-color: var(--bacolor);
+  color: black;
+}
+.list a {
+  text-decoration: none;
+  color: var(--co);
+  transition: 0.2s;
+  padding: 7px 14px;
+  border-radius: 20px;
+}
+
+.main {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  background: linear-gradient(to top, #200016, transparent);
+}
+
+.main img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+}
+#moon {
+  /* mix-blend-mode: screen; */
+  transform: translateY(70px);
+}
+.main h2 {
+  z-index: 10;
+  color: var(--co);
+  text-transform: uppercase;
+  transform: translateY(-70px);
+  font-size: 14px;
+}
